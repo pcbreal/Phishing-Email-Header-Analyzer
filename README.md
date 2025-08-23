@@ -35,6 +35,7 @@ Here’s what the analyzer looks like in action:
 
 > Text version available in [assets/demo.txt](assets/demo.txt).
 
+
 ---
 
 ## Why This Matters
