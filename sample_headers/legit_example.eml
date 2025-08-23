@@ -1,0 +1,14 @@
+Return-Path: <no-reply@news.example.com>
+Received: from mailin-01.example.org (mailin-01.example.org [203.0.113.10])
+        by mx.yourdomain.com with ESMTPS id abc123
+        for <you@yourdomain.com>; Tue, 19 Aug 2025 09:42:20 +0000
+Authentication-Results: mx.yourdomain.com;
+        spf=pass smtp.mailfrom=news.example.com;
+        dkim=pass header.d=example.com;
+        dmarc=pass action=none header.from=example.com
+DKIM-Signature: v=1; a=rsa-sha256; d=example.com; s=dkim1; ...
+From: Example News <no-reply@news.example.com>
+To: You <you@yourdomain.com>
+Message-ID: <20250819.094112.12345@mailin-01.example.org>
+Date: Tue, 19 Aug 2025 09:41:12 +0000
+Subject: Your weekly update

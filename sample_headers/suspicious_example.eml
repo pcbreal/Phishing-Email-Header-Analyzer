@@ -1,0 +1,12 @@
+Return-Path: <mailer@amz-b1lling.com>
+Received: from mx23.mail-amz.support (198.51.100.23)
+        by mx.yourdomain.com with ESMTP id qwe987; Tue, 19 Aug 2025 09:42:20 +0000
+Authentication-Results: mx.yourdomain.com;
+        spf=fail smtp.mailfrom=amz-b1lling.com;
+        dkim=pass header.d=amz-support.com;
+        dmarc=fail header.from=amz-b1lling.com
+From: "Amazon Billing" <notice@amz-b1lling.com>
+Reply-To: support@amz-b1lling.com
+Message-ID: <9348523@mx23.mail-amz.support>
+Date: Tue, 19 Aug 2025 09:41:12 +0000
+Subject: Action Required: Payment declined

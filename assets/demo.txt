@@ -1,0 +1,19 @@
+=== Auth Summary ===
+SPF: FAIL  DKIM: PASS  DMARC: FAIL
+
+=== Identities ===
+From:        Amazon Billing <notice@amz-b1lling.com>
+Return-Path: <mailer@amz-b1lling.com>
+Reply-To:    support@amz-b1lling.com
+Message-ID:  <9348523@mx23.mail-amz.support>
+Date:        Tue, 19 Aug 2025 09:41:12 +0000
+
+=== Received Chain (top=most recent) ===
+[0] mx23.mail-amz.support (198.51.100.23) <- first sending host
+
+=== Anomalies ===
+- SPF is not strong PASS (fail/soft/unknown).
+- DMARC not passing → check alignment and policy.
+- Message-ID domain does not match From domain (not always bad).
+
+Verdict: HIGH RISK
