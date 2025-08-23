@@ -33,7 +33,7 @@ Here’s what the analyzer looks like in action:
 
 ![Example Analyzer Output](assets/example.png)
 
-> Text version available in [assets/demo.txt](assets/demo.txt)
+> Text version available in [assets/demo.txt](assets/demo.txt).
 
 ---
 
