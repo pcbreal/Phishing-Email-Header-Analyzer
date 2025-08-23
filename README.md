@@ -3,7 +3,7 @@
 A lightweight CLI tool for **Security / CTI analysts** to triage email headers:
 
 - Summarizes **SPF / DKIM / DMARC** verdicts  
-- Maps the **Received** hop chain  
+- Maps the **Received** hop chain
 - Flags anomalies (domain misalignment, missing headers, lookalikes)  
 - Colorized terminal output (green/yellow/red)  
 - **No network calls** (safe offline)
@@ -33,7 +33,7 @@ Here’s what the analyzer looks like in action:
 
 ![Example Analyzer Output](assets/example.png)
 
-> Text version available in [assets/demo.txt](assets/demo.txt).
+> Text version available in [assets/demo.txt](> Text version available in [assets/demo.txt](https://github.com/pcbreal/Phishing-Email-Header-Analyzer/blob/main/assets/demo.txt).
 
 
 ---
