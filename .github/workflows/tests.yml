@@ -9,6 +9,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -18,24 +19,35 @@ jobs:
         with:
           python-version: "3.13"
 
-      - name: Cache pip
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('requirements*.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-
-      - name: Install deps
+      - name: Show repo state
         run: |
-          python -m pip install -U pip
-          python -m pip install -r requirements.txt -r requirements-dev.txt
+          echo "PWD: $(pwd)"
+          ls -la
+          git status --porcelain
+
+      - name: Upgrade pip
+        run: python -m pip install -U pip
+
+      - name: Install runtime deps
+        run: python -m pip install -r requirements.txt
+
+      - name: Install dev deps (if present)
+        shell: bash
+        run: |
+          if [[ -f requirements-dev.txt ]]; then
+            echo "Installing dev deps from requirements-dev.txt"
+            python -m pip install -r requirements-dev.txt
+          else
+            echo "requirements-dev.txt not found; installing base tools directly"
+            python -m pip install ruff black pytest pytest-cov
+          fi
 
       - name: Lint
         run: |
+          ruff --version
           ruff check .
+          black --version
           black --check .
 
       - name: Run tests
-        run: |
-          pytest
+        run: pytest -q
